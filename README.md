@@ -8,3 +8,7 @@ chmod +x make.sh
 ./make.sh
 
 O servidor irá startar na porta definida e a api estara apta para receber requisicoes.
+
+```
+https://crowcpp.org/master/getting_started/setup/linux/
+```
