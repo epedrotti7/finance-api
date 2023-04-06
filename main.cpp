@@ -4,11 +4,11 @@ int main()
 {
     crow::SimpleApp app;
 
-    CROW_ROUTE(app, "/despesa")
+    CROW_ROUTE(app, "/")
     ([]()
      {
         crow::json::wvalue response;
-        response["Descricao"] = "Fatal Model";
+        response["message"] = "hello world";
         return response; 
     });
 
