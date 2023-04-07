@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/pedrotti/apicpp/main.cpp" "CMakeFiles/my_api_project.dir/main.cpp.o" "gcc" "CMakeFiles/my_api_project.dir/main.cpp.o.d"
+  "/home/pedrotti/finance-api/main.cpp" "CMakeFiles/my_api_project.dir/main.cpp.o" "gcc" "CMakeFiles/my_api_project.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -1,4 +1,4 @@
-# Install script for directory: /home/pedrotti/apicpp
+# Install script for directory: /home/pedrotti/finance-api
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pedrotti/apicpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pedrotti/finance-api/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

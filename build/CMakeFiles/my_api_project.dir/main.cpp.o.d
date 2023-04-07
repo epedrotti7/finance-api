@@ -1,6 +1,7 @@
-CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
- /usr/include/stdc-predef.h /home/pedrotti/apicpp/crow/include/crow.h \
- /home/pedrotti/apicpp/crow/include/crow/query_string.h \
+CMakeFiles/my_api_project.dir/main.cpp.o: \
+ /home/pedrotti/finance-api/main.cpp /usr/include/stdc-predef.h \
+ /home/pedrotti/finance-api/Crow/include/crow.h \
+ /home/pedrotti/finance-api/Crow/include/crow/query_string.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -304,7 +305,7 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/boost/optional/detail/optional_reference_spec.hpp \
  /usr/include/boost/optional/detail/optional_relops.hpp \
  /usr/include/boost/optional/detail/optional_swap.hpp \
- /home/pedrotti/apicpp/crow/include/crow/http_parser_merged.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_parser_merged.h \
  /usr/include/c++/11/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -314,7 +315,7 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/pedrotti/apicpp/crow/include/crow/ci_map.h \
+ /home/pedrotti/finance-api/Crow/include/crow/ci_map.h \
  /usr/include/boost/algorithm/string/predicate.hpp \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/boost/algorithm/string/config.hpp \
@@ -584,9 +585,9 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/pedrotti/apicpp/crow/include/crow/TinySHA1.hpp \
- /home/pedrotti/apicpp/crow/include/crow/settings.h \
- /home/pedrotti/apicpp/crow/include/crow/socket_adaptors.h \
+ /home/pedrotti/finance-api/Crow/include/crow/TinySHA1.hpp \
+ /home/pedrotti/finance-api/Crow/include/crow/settings.h \
+ /home/pedrotti/finance-api/Crow/include/crow/socket_adaptors.h \
  /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/linux/version.h \
@@ -1330,7 +1331,7 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/boost/asio/windows/stream_handle.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/pedrotti/apicpp/crow/include/crow/json.h \
+ /home/pedrotti/finance-api/Crow/include/crow/json.h \
  /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/lexical_cast/bad_lexical_cast.hpp \
  /usr/include/boost/lexical_cast/try_lexical_convert.hpp \
@@ -1493,20 +1494,20 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/quadmath.h \
  /usr/include/boost/integer.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /home/pedrotti/apicpp/crow/include/crow/mustache.h \
+ /home/pedrotti/finance-api/Crow/include/crow/mustache.h \
  /usr/include/c++/11/fstream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/pedrotti/apicpp/crow/include/crow/logging.h \
- /home/pedrotti/apicpp/crow/include/crow/dumb_timer_queue.h \
+ /home/pedrotti/finance-api/Crow/include/crow/logging.h \
+ /home/pedrotti/finance-api/Crow/include/crow/dumb_timer_queue.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/this_thread_sleep.h \
- /home/pedrotti/apicpp/crow/include/crow/utility.h \
- /home/pedrotti/apicpp/crow/include/crow/common.h \
- /home/pedrotti/apicpp/crow/include/crow/http_request.h \
- /home/pedrotti/apicpp/crow/include/crow/websocket.h \
- /home/pedrotti/apicpp/crow/include/crow/TinySHA1.hpp \
- /home/pedrotti/apicpp/crow/include/crow/parser.h \
+ /home/pedrotti/finance-api/Crow/include/crow/utility.h \
+ /home/pedrotti/finance-api/Crow/include/crow/common.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_request.h \
+ /home/pedrotti/finance-api/Crow/include/crow/websocket.h \
+ /home/pedrotti/finance-api/Crow/include/crow/TinySHA1.hpp \
+ /home/pedrotti/finance-api/Crow/include/crow/parser.h \
  /usr/include/boost/algorithm/string.hpp \
  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
  /usr/include/boost/algorithm/string/std/string_traits.hpp \
@@ -1569,13 +1570,13 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/boost/algorithm/string/formatter.hpp \
  /usr/include/boost/algorithm/string/detail/formatter.hpp \
  /usr/include/boost/algorithm/string/erase.hpp \
- /home/pedrotti/apicpp/crow/include/crow/http_parser_merged.h \
- /home/pedrotti/apicpp/crow/include/crow/http_response.h \
- /home/pedrotti/apicpp/crow/include/crow/middleware.h \
- /home/pedrotti/apicpp/crow/include/crow/routing.h \
- /home/pedrotti/apicpp/crow/include/crow/middleware_context.h \
- /home/pedrotti/apicpp/crow/include/crow/http_connection.h \
- /home/pedrotti/apicpp/crow/include/crow/http_server.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_parser_merged.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_response.h \
+ /home/pedrotti/finance-api/Crow/include/crow/middleware.h \
+ /home/pedrotti/finance-api/Crow/include/crow/routing.h \
+ /home/pedrotti/finance-api/Crow/include/crow/middleware_context.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_connection.h \
+ /home/pedrotti/finance-api/Crow/include/crow/http_server.h \
  /usr/include/boost/date_time/posix_time/posix_time.hpp \
  /usr/include/boost/date_time/posix_time/time_formatters.hpp \
  /usr/include/boost/date_time/gregorian/gregorian.hpp \
@@ -1614,4 +1615,4 @@ CMakeFiles/my_api_project.dir/main.cpp.o: /home/pedrotti/apicpp/main.cpp \
  /usr/include/boost/date_time/posix_time/conversion.hpp \
  /usr/include/boost/date_time/filetime_functions.hpp \
  /usr/include/boost/date_time/posix_time/time_parsers.hpp \
- /home/pedrotti/apicpp/crow/include/crow/app.h
+ /home/pedrotti/finance-api/Crow/include/crow/app.h
