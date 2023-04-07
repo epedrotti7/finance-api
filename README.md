@@ -15,9 +15,6 @@ chmod +x make.sh
 # Execute o script
 ./make.sh
 
-<<<<<<< Updated upstream
-O servidor irá startar na porta definida e a api estara apta para receber requisicoes.
-=======
 O servidor irá startar na porta definida e a api estara apta para receber requisicoes.
 
 ```
@@ -26,4 +23,3 @@ https://crowcpp.org/master/getting_started/setup/linux/
 
 Connector C++
 https://mariadb.com/docs/skysql/connect/programming-languages/cpp/
->>>>>>> Stashed changes
