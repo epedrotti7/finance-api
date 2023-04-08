@@ -5,3 +5,4 @@
 #include <string>
 
 Json::Value get_users(MYSQL *connection);
+Json::Value get_expenses(MYSQL *connection, int user_id);
