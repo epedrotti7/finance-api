@@ -1,7 +1,8 @@
-#!/bin/bash
+if [ ! -d "build" ]; then
+  mkdir build
+fi
 
 cd build
-rm -rf *
 cmake ..
 make
-./my_api_project
+./finance_api

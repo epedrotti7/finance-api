@@ -1,14 +1,23 @@
 cmake_minimum_required(VERSION 3.10)
-project(my_api_project)
+project(finance_api)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_PREFIX_PATH /usr/lib/x86_64-linux-gnu)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/crow/include)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Crow/include)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(JSONCPP jsoncpp)
+link_libraries(${JSONCPP_LIBRARIES})
+include_directories(${JSONCPP_INCLUDE_DIRS})
 
-add_executable(my_api_project main.cpp)
+find_library(MYSQL_CPP_CONN mysqlcppconn)
+include_directories(/usr/include/mysql-cppconn-8)
+link_directories(/usr/lib/x86_64-linux-gnu)
+link_libraries(${MYSQL_CPP_CONN})
 
-find_package(Boost 1.71.0 COMPONENTS system thread REQUIRED)
-target_link_libraries(my_api_project ${Boost_LIBRARIES})
+include_directories(src/headers)
+
+add_executable(finance_api src/main.cpp src/database.cpp src/repository.cpp)
+target_link_libraries(finance_api ${MYSQL_LIBRARIES} -lmysqlclient)

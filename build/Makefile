@@ -117,41 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_api_project
+# Target rules for targets named finance_api
 
 # Build rule for target.
-my_api_project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_api_project
-.PHONY : my_api_project
+finance_api: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 finance_api
+.PHONY : finance_api
 
 # fast build rule for target.
-my_api_project/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_api_project.dir/build.make CMakeFiles/my_api_project.dir/build
-.PHONY : my_api_project/fast
+finance_api/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/build
+.PHONY : finance_api/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/database.o: src/database.cpp.o
+.PHONY : src/database.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_api_project.dir/build.make CMakeFiles/my_api_project.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/database.cpp.o
+.PHONY : src/database.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/database.i: src/database.cpp.i
+.PHONY : src/database.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_api_project.dir/build.make CMakeFiles/my_api_project.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/database.cpp.i
+.PHONY : src/database.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/database.s: src/database.cpp.s
+.PHONY : src/database.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_api_project.dir/build.make CMakeFiles/my_api_project.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/database.cpp.s
+.PHONY : src/database.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/repository.o: src/repository.cpp.o
+.PHONY : src/repository.o
+
+# target to build an object file
+src/repository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.o
+.PHONY : src/repository.cpp.o
+
+src/repository.i: src/repository.cpp.i
+.PHONY : src/repository.i
+
+# target to preprocess a source file
+src/repository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.i
+.PHONY : src/repository.cpp.i
+
+src/repository.s: src/repository.cpp.s
+.PHONY : src/repository.s
+
+# target to generate assembly for a file
+src/repository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.s
+.PHONY : src/repository.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_api_project"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... finance_api"
+	@echo "... src/database.o"
+	@echo "... src/database.i"
+	@echo "... src/database.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/repository.o"
+	@echo "... src/repository.i"
+	@echo "... src/repository.s"
 .PHONY : help
 
 
