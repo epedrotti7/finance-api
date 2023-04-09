@@ -153,6 +153,30 @@ src/database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/database.cpp.s
 .PHONY : src/database.cpp.s
 
+src/expense_repository.o: src/expense_repository.cpp.o
+.PHONY : src/expense_repository.o
+
+# target to build an object file
+src/expense_repository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/expense_repository.cpp.o
+.PHONY : src/expense_repository.cpp.o
+
+src/expense_repository.i: src/expense_repository.cpp.i
+.PHONY : src/expense_repository.i
+
+# target to preprocess a source file
+src/expense_repository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/expense_repository.cpp.i
+.PHONY : src/expense_repository.cpp.i
+
+src/expense_repository.s: src/expense_repository.cpp.s
+.PHONY : src/expense_repository.s
+
+# target to generate assembly for a file
+src/expense_repository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/expense_repository.cpp.s
+.PHONY : src/expense_repository.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,30 +201,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/repository.o: src/repository.cpp.o
-.PHONY : src/repository.o
-
-# target to build an object file
-src/repository.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.o
-.PHONY : src/repository.cpp.o
-
-src/repository.i: src/repository.cpp.i
-.PHONY : src/repository.i
-
-# target to preprocess a source file
-src/repository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.i
-.PHONY : src/repository.cpp.i
-
-src/repository.s: src/repository.cpp.s
-.PHONY : src/repository.s
-
-# target to generate assembly for a file
-src/repository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_api.dir/build.make CMakeFiles/finance_api.dir/src/repository.cpp.s
-.PHONY : src/repository.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... src/database.o"
 	@echo "... src/database.i"
 	@echo "... src/database.s"
+	@echo "... src/expense_repository.o"
+	@echo "... src/expense_repository.i"
+	@echo "... src/expense_repository.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/repository.o"
-	@echo "... src/repository.i"
-	@echo "... src/repository.s"
 .PHONY : help
 
 

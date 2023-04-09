@@ -1,24 +1,26 @@
 #include "headers/database.h"
 #include <iostream>
 
-MYSQL *connect_to_database()
+Database::Database()
 {
-    MYSQL *connection;
-    connection = mysql_init(nullptr);
+    host = "172.27.192.1";
+    user = "finance";
+    password = "finance";
+    db_name = "finances";
+}
 
-    if (!connection)
-    {
-        std::cerr << "Erro ao inicializar o MySQL: " << mysql_error(connection) << std::endl;
-        return nullptr;
-    }
+Database::~Database() {}
 
-    if (!mysql_real_connect(connection, "172.27.192.1", "finance", "finance", "finances", 3306, nullptr, 0))
+MYSQL *Database::create_connection()
+{
+    MYSQL *connection = mysql_init(nullptr);
+
+    if (!mysql_real_connect(connection, host.c_str(), user.c_str(), password.c_str(), db_name.c_str(), 0, nullptr, 0))
     {
         std::cerr << "Erro ao conectar ao banco de dados: " << mysql_error(connection) << std::endl;
         mysql_close(connection);
         return nullptr;
     }
 
-    std::cout << "Conexão bem-sucedida ao banco de dados!" << std::endl;
     return connection;
 }

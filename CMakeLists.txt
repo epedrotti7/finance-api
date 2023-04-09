@@ -19,5 +19,5 @@ link_libraries(${MYSQL_CPP_CONN})
 
 include_directories(src/headers)
 
-add_executable(finance_api src/main.cpp src/database.cpp src/repository.cpp)
+add_executable(finance_api src/main.cpp src/database.cpp src/expense_repository.cpp)
 target_link_libraries(finance_api ${MYSQL_LIBRARIES} -lmysqlclient)
