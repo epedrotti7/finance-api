@@ -6,7 +6,6 @@ ExpenseRepository::ExpenseRepository(Database &db) : database(db) {}
 
 Json::Value ExpenseRepository::get_expenses(int user_id)
 {
-    std::cout << "Iniciando get_expenses" << std::endl;
     MYSQL *connection = database.create_connection();
     if (!connection)
     {

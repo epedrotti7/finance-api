@@ -8,21 +8,7 @@
 int main()
 {
     Database db;
-    
-    // Testa a conexão com o banco de dados
-    MYSQL *test_conn = db.create_connection();
-    if (test_conn)
-    {
-        std::cout << "Conexão com o banco de dados estabelecida com sucesso!" << std::endl;
-        mysql_close(test_conn);
-    }
-    else
-    {
-        std::cout << "Não foi possível estabelecer uma conexão com o banco de dados." << std::endl;
-    }
-
     ExpenseRepository expense_repository(db);
-
     crow::SimpleApp app;
 
     // Buscar despesa

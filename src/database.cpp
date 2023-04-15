@@ -23,6 +23,5 @@ MYSQL *Database::create_connection()
         return nullptr;
     }
 
-    std::cout << "Conexão bem-sucedida ao banco de dados!" << std::endl;
     return connection;
 }
