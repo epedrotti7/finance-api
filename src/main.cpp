@@ -27,6 +27,7 @@ int main()
             std::string response_body = Json::writeString(writer, expenses_json);
 
             crow::response res(response_body);
+            res.set_header("Access-Control-Allow-Origin", "*");
             res.set_header("Content-Type", "application/json");
             return res; });
 
@@ -81,6 +82,7 @@ int main()
         std::string response_body = Json::writeString(writer, expense_json);
 
         crow::response res(response_body);
+            res.set_header("Access-Control-Allow-Origin", "*");
         res.set_header("Content-Type", "application/json");
         return res; });
 
