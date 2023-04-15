@@ -1,4 +1,10 @@
 
+# Passo a passo utilizando o WSL2 do Windows
+-> Startar a imagem pelo Docker desktop
+-> Acessar settings -> resources -> WSL integration
+
+Ativar a distro escolhida e salvar.
+
 # Para startar a API
 
 Certifique-se de ter o compilador do c++ instalado

@@ -6,24 +6,25 @@ ExpenseRepository::ExpenseRepository(Database &db) : database(db) {}
 
 Json::Value ExpenseRepository::get_expenses(int user_id)
 {
+    std::cout << "Iniciando get_expenses" << std::endl;
     MYSQL *connection = database.create_connection();
     if (!connection)
     {
-        return "";
+           return Json::Value(Json::objectValue);
     }
 
     std::string query = "SELECT * FROM despesas WHERE usuario_id = " + std::to_string(user_id);
     if (mysql_query(connection, query.c_str()))
     {
         std::cerr << "Erro ao executar a query: " << mysql_error(connection) << std::endl;
-        return "";
+           return Json::Value(Json::objectValue);
     }
 
     MYSQL_RES *result = mysql_store_result(connection);
     if (!result)
     {
         std::cerr << "Erro ao obter o resultado: " << mysql_error(connection) << std::endl;
-        return "";
+           return Json::Value(Json::objectValue);
     }
 
     MYSQL_ROW row;

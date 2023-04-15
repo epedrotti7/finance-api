@@ -8,6 +8,19 @@
 int main()
 {
     Database db;
+    
+    // Testa a conexão com o banco de dados
+    MYSQL *test_conn = db.create_connection();
+    if (test_conn)
+    {
+        std::cout << "Conexão com o banco de dados estabelecida com sucesso!" << std::endl;
+        mysql_close(test_conn);
+    }
+    else
+    {
+        std::cout << "Não foi possível estabelecer uma conexão com o banco de dados." << std::endl;
+    }
+
     ExpenseRepository expense_repository(db);
 
     crow::SimpleApp app;
@@ -17,6 +30,12 @@ int main()
         .methods("GET"_method)([&](const crow::request &req, int user_id)
                                {
             Json::Value expenses_json = expense_repository.get_expenses(user_id);
+
+            if (expenses_json.empty()) {
+                crow::response res(500);
+                res.write("Failed to fetch expenses");
+                return res;
+            }
 
             Json::StreamWriterBuilder writer;
             std::string response_body = Json::writeString(writer, expenses_json);

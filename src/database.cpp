@@ -3,7 +3,8 @@
 
 Database::Database()
 {
-    host = "172.27.192.1";
+    // host = "172.27.192.1";
+    host = "127.0.0.1";
     user = "finance";
     password = "finance";
     db_name = "finances";
@@ -22,5 +23,6 @@ MYSQL *Database::create_connection()
         return nullptr;
     }
 
+    std::cout << "Conexão bem-sucedida ao banco de dados!" << std::endl;
     return connection;
 }
