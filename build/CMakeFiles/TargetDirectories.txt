@@ -1,3 +1,0 @@
-/home/pedrotti/finance-api/build/CMakeFiles/finance_api.dir
-/home/pedrotti/finance-api/build/CMakeFiles/edit_cache.dir
-/home/pedrotti/finance-api/build/CMakeFiles/rebuild_cache.dir
