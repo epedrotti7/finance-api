@@ -1,6 +1,6 @@
-namespace FinanceApi.Models
+namespace FinanceApi.Structs
 {
-    public class Expense
+    public struct Expense
     {
         public int id { get; set; }
         public int id_usuario { get; set; }

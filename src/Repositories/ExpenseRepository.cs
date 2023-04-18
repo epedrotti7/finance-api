@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FinanceApi.Models;
+using FinanceApi.Structs;
 using FinanceApi.Database;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;

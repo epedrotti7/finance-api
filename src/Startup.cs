@@ -1,5 +1,5 @@
 using FinanceApi.Database;
-using FinanceApi.Models;
+using FinanceApi.Structs;
 using FinanceApi.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
