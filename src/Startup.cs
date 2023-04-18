@@ -21,7 +21,7 @@ namespace FinanceApi
             });
             services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
-            services.AddControllers();
+            // services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app,
@@ -39,6 +39,7 @@ namespace FinanceApi
 
             app.UseEndpoints(endpoints =>
             {
+                //Buscar despesas
                 endpoints.MapGet("/despesas/{userId}", async context =>
                 {
                     int userId = int.Parse(context.Request.RouteValues["userId"].ToString());
@@ -47,6 +48,26 @@ namespace FinanceApi
                     var response = new { despesas = expenses };
 
                     await context.Response.WriteAsJsonAsync(response);
+                });
+
+                //Buscar despesa específica
+                endpoints.MapGet("/despesas/{userId}/{expenseId}", async context =>
+                {
+                    int userId = int.Parse(context.Request.RouteValues["userId"].ToString());
+                    int expenseId = int.Parse(context.Request.RouteValues["expenseId"].ToString());
+
+                    var expenseRepository = context.RequestServices.GetService<IExpenseRepository>();
+                    var expenseResult = await expenseRepository.GetExpense(userId, expenseId);
+
+                    if (expenseResult.ErrorMessage != null)
+                    {
+                        context.Response.StatusCode = StatusCodes.Status404NotFound;
+                        await context.Response.WriteAsJsonAsync(new { message = expenseResult.ErrorMessage });
+                    }
+                    else
+                    {
+                        await context.Response.WriteAsJsonAsync(expenseResult.Expense);
+                    }
                 });
             });
 

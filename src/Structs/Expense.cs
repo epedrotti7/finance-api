@@ -9,4 +9,11 @@ namespace FinanceApi.Structs
         public string data_vencimento { get; set; }
         public bool pago { get; set; }
     }
+
+    public struct ExpenseResult
+    {
+        public Expense? Expense { get; set; }
+        public string? ErrorMessage { get; set; }
+    }
+
 }
